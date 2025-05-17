@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Pages />
-      <Toaster />
+      <Toaster position="bottom-right" />
     </>
   );
 }
