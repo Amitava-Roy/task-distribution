@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../api/baseUrl";
-import { getAuthData } from "../config/authConfig";
+import { getAuthData, saveAuthData } from "../config/authConfig";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -18,13 +18,11 @@ export default function LoginPage() {
 
     try {
       const res = await api.post("/api/v1/users/signIn", { email, password });
-      const { token } = res.data;
 
-      // Store the token in localStorage or cookie
-      localStorage.setItem("token", token);
+      saveAuthData(res?.data?.result?.token, res?.data?.result?.userDetails);
 
       // Redirect based on role (if needed, decode token using jwt-decode)
-      navigate("/admin/assign"); // or /admin or /user
+      navigate("/agents"); // or /admin or /user
     } catch {
       // console.error(err.response?.data || "Login failed");
       alert("Invalid email or password");

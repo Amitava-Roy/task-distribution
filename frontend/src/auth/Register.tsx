@@ -22,7 +22,6 @@ export default function RegisterPage() {
         email,
         password,
       });
-      console.log(registerData?.data);
 
       saveAuthData(
         registerData?.data?.result?.token,
@@ -137,7 +136,7 @@ export default function RegisterPage() {
           <div className="mt-6 text-right">
             <p className="text-sm text-gray-700">
               Already have an account?{" "}
-              <Link to="/login">
+              <Link to="/">
                 <span className="font-semibold text-purple-600 hover:text-purple-700 hover:underline transition duration-150 ease-in-out">
                   Sign in here
                 </span>
