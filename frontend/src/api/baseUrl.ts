@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3000";
+const baseURL = "https://task-distribution-production.up.railway.app";
 
 const api = axios.create({
   baseURL,

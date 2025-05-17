@@ -29,7 +29,7 @@ export default function RegisterPage() {
         registerData?.data?.result?.userDetails
       );
       // Redirect the user to the login page
-      navigate("/dashboard");
+      navigate("/agents");
     } catch (error) {
       console.log(error);
       alert("Registration failed. Please try again.");
