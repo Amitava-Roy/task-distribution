@@ -116,7 +116,7 @@ export default function Agents() {
   return (
     <main className="flex-1 p-6 overflow-y-auto pt-20 md:pt-6 pb-24 md:pb-6">
       <div>
-        <h2 className="text-3xl font-bold mb-6 text-purple-900">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-purple-900">
           Agents Dashboard
         </h2>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../api/baseUrl";
 import { saveAuthData } from "../config/authConfig";
+import toast from "react-hot-toast";
 
 export default function RegisterPage() {
   // State for email input
@@ -29,9 +30,8 @@ export default function RegisterPage() {
       );
       // Redirect the user to the login page
       navigate("/agents");
-    } catch (error) {
-      console.log(error);
-      alert("Registration failed. Please try again.");
+    } catch {
+      toast.error("Registration failed. Please try again.");
     }
   };
 

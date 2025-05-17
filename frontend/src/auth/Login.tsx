@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../api/baseUrl";
 import { getAuthData, saveAuthData } from "../config/authConfig";
+import toast from "react-hot-toast";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ export default function LoginPage() {
       navigate("/agents"); // or /admin or /user
     } catch {
       // console.error(err.response?.data || "Login failed");
-      alert("Invalid email or password");
+      toast.error("Login failed. Please check your email and password.");
     }
   };
 

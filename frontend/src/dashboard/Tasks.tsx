@@ -147,7 +147,9 @@ export default function Tasks() {
     <main className="flex-1 p-6 overflow-y-auto pt-20 md:pt-6 pb-24 md:pb-6">
       <div>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-bold text-purple-900">Tasks Overview</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-purple-900">
+            Tasks Overview
+          </h2>
           {/* Button to toggle file upload section */}
           <button
             onClick={() => setIsFileUploadVisible(!isFileUploadVisible)}
